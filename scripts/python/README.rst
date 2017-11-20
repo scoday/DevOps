@@ -1,8 +1,6 @@
-Drive Management Repo
+Python Script Repo
 =====================
 
 `This is where to find info <http://www.scoday.tokyo>`_.
-
----------------
-
-This is where you can grab scripts for mounting and managing drives.
+`Ultimately this repo is a staging area for python work. There is a modules dir`
+`which contains the framework for a python module.`
