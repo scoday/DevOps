@@ -1,5 +1,5 @@
 FROM opensuse:leap
-MAINTAINTER ScoDay.Tokyo
+MAINTAINER ScoDay.Tokyo
 
 RUN zypper ref && \
     zypper -n in salt-master python-MySQL-python && \
