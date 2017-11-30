@@ -6,6 +6,9 @@ RUN zypper ref && \
     zypper clean -a
 
 RUN useradd -MNrs /bin/false saltapi
-RUN echo "saltapi:saltapi" | chpasswd
+
+ARG password
+#RUN echo "saltapi:saltapi" | chpasswd
+RUN sh -c "echo saltapi:${password:-ScottDay12345} | chpasswd"
 
 CMD salt-master
