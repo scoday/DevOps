@@ -10,3 +10,13 @@ current. Why you might ask? Well look at scoday.tokyo for more information, but 
 There are a number of files in here from Dockerfiles to bind configs, to whatever. The list changes daily so just browse.
 ### Bind
 If you don't run your own $SERVER then you really don't understand, fully, what you are doing. So, run a bind server, DHCP, whatever it will only help you on your career path. Have an AWS clouds that isn't starting because it can't get a lease, unreachable because of DNS, it doens't hurt to have some background.
+
+## Docker
+Some things and stuff
+
+### Docker's Hanging Chads (Dangling Images)
+
+So you built an image and you have a bunch of these <none> <none> imgaes, to get rid of the none docker images: 
+```
+$ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+``` 
