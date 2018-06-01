@@ -1,0 +1,6 @@
+# Only modification to master was to uncomment:
+file_roots:
+  base:
+    - /srv/salt
+
+# For now that will do nicely.
