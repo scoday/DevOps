@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+  apache:
+    build:
+      context: ./docker/apache
+      dockerfile: Dockerfile
+    cap_add:
+      - SETGID
+    cap_drop:
+      - ALL
+    networks:
+      - private
+    ports:
+      - "80:8080"
+
+  php-fpm:
+    build:
+      context: ./docker/fpm
+      dockerfile: Dockerfile
+    cap_drop:
+      - ALL
+    networks:
+      - private
+    ports:
+      - "9000:9000"
+
+networks:
+  private:
+    driver: bridge
