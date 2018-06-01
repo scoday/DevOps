@@ -8,8 +8,9 @@ current. Why you might ask? Well look at scoday.tokyo for more information, but 
 
 ## Files
 There are a number of files in here from Dockerfiles to bind configs, to whatever. The list changes daily so just browse.
+
 ### Bind
-If you don't run your own $SERVER then you really don't understand, fully, what you are doing. So, run a bind server, DHCP, whatever it will only help you on your career path. Have an AWS clouds that isn't starting because it can't get a lease, unreachable because of DNS, it doens't hurt to have some background.
+Bind contains some basic bind things to get you started. The goal here is to make things like automation a bit less painful by having forward and reverse dns on a domain like myhouse.local. 
 
 ## Docker
 Some things and stuff
