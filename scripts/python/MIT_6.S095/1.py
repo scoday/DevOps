@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3.4
 #
 # Ball Cap Chaos Theory..
 # Part of MIT 6.S095
@@ -14,7 +14,7 @@ caps2 = ['F', 'F', 'B', 'B', 'B', 'F', 'B', 'B', 'B', 'F', 'F', 'F', 'F']
 # else:
 #    verbosePrint = lambda *a: None # Nothing function
 
-def pleaseConform(caps):
+def pleaseConformOpt(caps):
     # Initialize
     start = 0
     forward = 0
@@ -31,7 +31,7 @@ def pleaseConform(caps):
                 forward += 1
             else:
                 backward += 1
-            start = 1
+            start = i
 
     # Add the last interval to complete the execution
     intervals.append((start, len(caps) - 1, caps[start]))
@@ -52,6 +52,16 @@ def pleaseConform(caps):
             print ('People in positions', t[0],
                    'through', t[1], 'flip your caps!')
 
+def pleaseConformOnepass(caps):
+    caps = caps + [caps[0]]
+    for i in range(1, len(caps)):
+        if caps[i] != caps[i-1]:
+            if caps[i] != caps[0]:
+                print('People in positions', i, end='')
+            else:
+                print(' through', i-1, 'flip your caps!')
+
 # verbosePrint
-pleaseConform(caps)
+pleaseConformOpt(caps)
+pleaseConformOnepass(caps)
 # pleaseConform(caps2)
