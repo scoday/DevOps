@@ -7,6 +7,6 @@ hostname = "pi.beastieco.com"
 response = os.system("ping " + hostname)
 
 if response == 0:
-  print hostname, 'is up!'
+    print hostname, 'is up!'
 else:
-  print hostname, 'is down!'
+    print hostname, 'is down!'
