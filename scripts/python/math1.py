@@ -3,7 +3,6 @@
 # Intended to just highlight some math things and a
 # range 
 
-import os
 import math
 
 # Initialize variables
