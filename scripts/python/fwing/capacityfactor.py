@@ -13,7 +13,6 @@ a monthly Capacity Factor. Then chart.
 '''
 
 hours = 24
-__future__:
 
 def capacityfactor():
     try:
