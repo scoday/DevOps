@@ -31,5 +31,8 @@ def capacityfactor():
     except(ZeroDivisionError, ValueError):
         print('-----------------------------------------------')
         print("Invalid input.")
+        print("-----------------------------------------------")
     cf = output / ((days)*(hours)*(ic))
-    print("Capacity Factor is: "+"{:.2%}".format(cf))
+    print("Capacity Factor is: "+"{0:.2%}".format(cf))
+
+capacityfactor()
