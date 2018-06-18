@@ -15,6 +15,14 @@ a monthly Capacity Factor. Then chart.
 hours = 24
 
 def capacityfactor():
+    '''
+    Returns the capacity factor % of a power plant given the
+    inputs of:
+    :param ic (installed capacity): int.
+    :param days (variable for now): int.
+    :param output (actual power plant output): int.
+    :return: float output / ((days)*(hours)(ic)).
+    ''' 
     try:
         ic = input("Enter the installed capacity (16MW = 16): ")
         days = input("Enter the number of generation days (e.g. 30): ")
