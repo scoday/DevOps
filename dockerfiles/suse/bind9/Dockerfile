@@ -6,9 +6,8 @@ RUN \
 
 COPY files/named.conf.local /var/lib/named/etc/named.conf.local
 COPY files/zones/* /var/lib/named/master/
+COPY files/start.sh /start.sh
 
-WORKDIR /var/lib/named
-
-CMD ["named"]
+CMD ["./start.sh"]
 
 EXPOSE 53

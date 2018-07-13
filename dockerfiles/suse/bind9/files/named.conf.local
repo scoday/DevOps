@@ -1,5 +1,5 @@
 // Master/Caching BIND 9
-// scoday(at)scoday.tokyo
+// scoday(at)gmx(dot)com
 
 options {
     version "whatever.";
@@ -28,16 +28,16 @@ view "internal" {
 
     zone "." {
         type hint;
-        file "/etc/bind/zones/root.zone";
+        file "/var/lib/named/root.hint";
     };
 
     zone "scoday.local" {
         type master;
-        file "/etc/bind/zones/db.scoday.local";
+        file "/var/lib/named/master/db.scoday.local";
     };
 
    zone "3.168.192.in-addr.arpa" {
    	type master;
-	file "/etc/bind/zones/db.3.168.192.in-addr.arpa";
+	file "/var/lib/named/master/db.3.168.192.in-addr.arpa";
    };
 };
