@@ -1,0 +1,45 @@
+; scoday.local
+$ORIGIN scoday.local.
+$TTL	10s
+
+@	IN	SOA	scoday.local.	root.scoday.local. (
+			2018053101   ; Serial
+				30s  ; Refresh
+				30s  ; Retry
+				30s  ; Expire
+				30s) ; Negative Cache TTL
+; Zone Foundation
+@		IN	NS	dns01
+		IN	MX	10 mail
+		IN	A	192.168.3.250
+; A Records
+rtr01		IN	A	192.168.3.1
+dns01		IN	A	192.168.3.2
+dlx01		IN	A	192.168.3.3
+db01		IN	A	192.168.3.4
+dlx03		IN	A	192.168.3.5
+dlx02		IN	A	192.168.3.7
+dlx04		IN	A	192.168.3.8
+dlx05		IN	A	192.168.3.9	
+dlx06		IN	A	192.168.3.10
+;		IN	A	192.168.3.11
+hndoi01		IN	A	192.168.3.20
+hndso01		IN	A	192.168.3.55
+hndsuse01	IN	A	192.168.3.60
+scobunberry	IN	A	192.168.3.200
+mail		IN	A	192.168.3.250
+; 
+; KVM Instances 
+hndvsuse01	IN	A	192.168.3.70
+hndvsuse03	IN	A	192.168.3.61
+
+; CNAMES
+confluence	IN	CNAME	dlx03.scoday.local.
+gw01		IN	CNAME	mail.scoday.local.
+ns1		IN	CNAME	dns01.scoday.local.
+nfs		IN	CNAME 	hndoi01.scoday.local.
+www		IN	CNAME	scoday.local.
+hndvsuse02	IN	CNAME	mail.scoday.local.
+salt		IN	CNAME	hndvsuse01.scoday.local.
+pi		IN	CNAME	scobunberry.scoday.local.
+; db01		IN	CNAME	hndvsuse03.scoday.local.

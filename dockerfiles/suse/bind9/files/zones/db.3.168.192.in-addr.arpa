@@ -1,0 +1,28 @@
+; 3.168.192.in-addr-arpa
+$ORIGIN 3.168.192.IN-ADDR.ARPA.
+$TTL	10s
+
+@	IN	SOA	dns01.scoday.local.	root.scoday.local. (
+			2018052101   ; Serial
+				30s  ; Refresh
+				30s  ; Retry
+				30s  ; Expire
+				30s) ; Negative Cache TTL
+; Zone Foundation
+@		IN	NS	dns01.scoday.local.
+; A Records
+1		IN	PTR	rtr01.scoday.local.
+2		IN	PTR	dns01.scoday.local.
+3		IN	PTR	dlx01.scoday.local.
+4		IN	PTR	db01.scoday.local.
+5		IN	PTR	dlx03.scoday.local.
+6		IN	PTR	dlx06.scoday.local.
+7		IN	PTR	dlx02.scoday.local.
+8		IN	PTR	dlx04.scoday.local.
+9		IN	PTR	dlx05.scoday.local.
+20		IN	PTR	hdnoi01.scoday.local.
+60		IN	PTR	hndsuse01.scoday.local.
+61		IN	PTR	hndvsuse03.scoday.local.
+70		IN	PTR	hndvsuse01.scoday.local.
+200		IN	PTR	scobunberry.scoday.local.
+250		IN	PTR	gw01.scoday.local.

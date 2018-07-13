@@ -1,0 +1,43 @@
+// Master/Caching BIND 9
+// scoday(at)scoday.tokyo
+
+options {
+    version "whatever.";
+    allow-transfer {"internals";};
+    allow-recursion {192.168.3.0/24;};
+};
+
+acl slaves {
+    1.1.1.0/24; // Digital Ocean name servers for external
+};
+
+//zone "scoday.local" {
+//    type master;
+//    file "/etc/bind/zones/db.scoday.local";
+//};
+//
+acl internals {
+	192.168.3.0/24;
+	172.17.0.0/16;
+	10.0.0.0/8;
+};
+
+view "internal" {
+    match-clients { internals; };
+    recursion yes;
+
+    zone "." {
+        type hint;
+        file "/etc/bind/zones/root.zone";
+    };
+
+    zone "scoday.local" {
+        type master;
+        file "/etc/bind/zones/db.scoday.local";
+    };
+
+   zone "3.168.192.in-addr.arpa" {
+   	type master;
+	file "/etc/bind/zones/db.3.168.192.in-addr.arpa";
+   };
+};
