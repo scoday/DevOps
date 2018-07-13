@@ -21,7 +21,6 @@ COPY files/named.sysconfig /etc/sysconfig/named
 # Simple script that should just fire up named
 COPY files/start.sh /start.sh
 
-ENTRYPOINT ["/start.sh"]
-CMD ["named"]
+CMD ["/start.sh"]
 
 EXPOSE 53/udp
