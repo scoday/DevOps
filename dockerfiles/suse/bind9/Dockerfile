@@ -5,8 +5,11 @@ FROM opensuse:latest
 # change the permissions on the working dir.
 RUN \
   zypper --gpg-auto-import-keys ref -s && \
-  zypper -in in bind bind-libs bind-utils && \
-  chown -R named:named /var/lib/named
+  zypper -in in \
+    bind \
+    bind-libs \
+    bind-utils && \
+    chown -R named:named /var/lib/named
 
 # Copy over some required files:
 # * named.conf.local = config file from existing system
@@ -18,6 +21,7 @@ COPY files/named.sysconfig /etc/sysconfig/named
 # Simple script that should just fire up named
 COPY files/start.sh /start.sh
 
-CMD ["/start.sh"]
+ENTRYPOINT ["/start.sh"]
+CMD ["named"]
 
 EXPOSE 53/udp
