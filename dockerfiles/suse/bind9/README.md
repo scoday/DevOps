@@ -18,8 +18,8 @@ This isn't the best way to build a Dockerfile perhaps, but it was fairly clean a
 To start the container you should make sure that the files/ folder has the correct settings for you in both the zone files and the config file.
 
 Build the container:
-'''
+```
 $ cd bind9
 $ docker built -t bind9:foo .
 $ docker run -d $image_id --name foo_container
-'''
+```
