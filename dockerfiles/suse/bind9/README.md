@@ -13,3 +13,13 @@ For more information on Bind I would suggest isc.org, that is where I took my fi
 
 ### Disclaimer 
 This isn't the best way to build a Dockerfile perhaps, but it was fairly clean and straight forward. 
+
+### Starting the container
+To start the container you should make sure that the files/ folder has the correct settings for you in both the zone files and the config file.
+
+Build the container:
+'''
+$ cd bind9
+$ docker built -t bind9:foo .
+$ docker run -d $image_id --name foo_container
+'''
