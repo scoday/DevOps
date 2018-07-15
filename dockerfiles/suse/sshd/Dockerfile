@@ -4,7 +4,7 @@ MAINTAINER ScoDay
 
 RUN \
     zypper --gpg-auto-import-keys ref -s && \
-    zypper -in in \
+    zypper -in in && \
     zypper install -y openssh && \
     mkdir /var/run/sshd && \
     echo 'root:foobar' | chgpasswd && \
