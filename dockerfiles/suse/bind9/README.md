@@ -23,3 +23,16 @@ $ cd bind9
 $ docker built -t bind9:foo .
 $ docker run -d $image_id --name foo_container
 ```
+
+## Issues
+One thing that was observed, after replacing the dns zone with the dns container subsequent containers were not being built properly, namely (no pun intended) due to what I suspect were dns issues. Upon a bit of investigation including a docker exec into the container, I noticed this error that suggested: 
+```
+reply from unexpected source: 172.17.0.1#53, expected 192.168.2
+```
+There was not a whole bunch of information avaialbe so I simply modified my resolv.conf on the docker host to reflect:
+```
+search scoday.local
+nameserver 172.17.0.1
+nameserver 192.168.3.2
+```
+So far no issues have been observed and docker containers build now.

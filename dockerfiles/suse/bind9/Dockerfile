@@ -1,5 +1,5 @@
 # Pull the latest OpenSUSE
-FROM opensuse:latest
+FROM opensuse:leap
 
 # Install a few things for bind and 
 # change the permissions on the working dir.

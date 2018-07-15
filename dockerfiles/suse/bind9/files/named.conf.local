@@ -4,7 +4,8 @@
 options {
     version "whatever.";
     allow-transfer {"internals";};
-    allow-recursion {192.168.3.0/24;};
+    allow-recursion {"internals";};
+    allow-query {"internals";};
 };
 
 acl slaves {
