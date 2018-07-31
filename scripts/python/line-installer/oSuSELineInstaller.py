@@ -3,6 +3,9 @@
 Basically a fully integrated script to 
 build line (windows app) on openSUSE Leap 15.0.
 Use and abuse as you please.
+
+The plan is to extend this quite a lot when
+time allows. 
 '''
 
 import os
