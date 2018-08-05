@@ -1,0 +1,12 @@
+---
+- name: basenodes
+  hosts: kvmhost1
+  become: yes
+  gather_facts: false
+  pre_tasks:
+    - name: Update zypper cache
+      raw: zypper ref
+      #      setup:
+
+- roles:
+  - base

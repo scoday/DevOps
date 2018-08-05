@@ -1,0 +1,29 @@
+# ansible main roles
+- name: Install Base Packages
+  zypper: name={{ item }} state=installed
+  with_items:
+    - htop
+    - ntp
+    - sysstat
+    - telnet
+    - git
+  tags:
+    - packages
+
+- name: Create deploy_user
+  user:
+    name: "deploy_user"
+    comment: "Used to deploy something"
+    state: present
+
+- name: Upgrade pip
+  pip: name=pip
+       state=latest
+  tags:
+    - packages
+
+- name: Create .ssh folder
+  file:
+    path: "/home/deploy_user/.ssh/"
+    state: directory
+    mode: 0755
