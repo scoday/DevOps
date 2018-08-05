@@ -1,12 +1,12 @@
 ---
-- name: basenodes
-  hosts: kvmhost1
+- hosts: kvmhost1
+  name: Primary kvm host
   become: yes
+  become_user: root
   gather_facts: false
   pre_tasks:
     - name: Update zypper cache
       raw: zypper ref
-      #      setup:
 
 - roles:
   - base
