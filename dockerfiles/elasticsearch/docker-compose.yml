@@ -1,7 +1,7 @@
 services:
   elasticsearch:
-    image: elasticsearch
-    container_name: elasticsearch
+    image: scoday/suse-salt
+    container_name: hnd-scosearch01
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
@@ -17,8 +17,8 @@ services:
     networks:
       - esnet
   elasticsearch2:
-    image: elasticsearch
-    container_name: elasticsearch2
+    image: scoday/suse-salt
+    container_name: hnd-scosearch02
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
