@@ -9,6 +9,9 @@ This is part of a long standing set of projects that are largely run out of my $
 Largely Linux, however these Linux machines run on one of two hosts now. One is OpenIndiana Hipster, the other is FreeBSD-12.0-
 current. Why you might ask? Well look at scoday.tokyo for more information, but to make a long story short for the ZFS file system. Why not in the CloudZ you might think? Well, I run two laptops (reads efficient and with battery backup), on has 8GB RAM the other has ~11GB RAM and between them I have built a number of VMs. All for the cost of, well, the cost to power a laptop which isn't much. I already "need" the high speed to do work (in the clouds) so why not run my own cloud for about nothing relatively speaking. 
 
+### Environment Modernization Program 2019
+It is kubernetes for now, last year there was a pretty extensive environent based on Linux, Docker, with some salt stack maintaining things and stuff. These days it is slowly being moved over to k8s. There will be a good deal more information forthcoming but for now some of the basics are being documented in the kubernetes area [here.](https://github.com/scoday/DevOps/tree/master/kubernetes)
+
 ## Files
 There are a number of files in here from Dockerfiles to bind configs, to whatever. The list changes daily so just browse.
 
