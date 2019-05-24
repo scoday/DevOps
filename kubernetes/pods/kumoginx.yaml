@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kumoginx
+spec:
+  selector:
+    matchLabels:
+      run: kumoginx
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: kumoginx
+    spec:
+      containers:
+      - name: kumoginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+
