@@ -1,8 +1,7 @@
-## These are the items that I thought might fit into the overall
-## flow of the Risk Assessment section. Please use it at your own PERIL!
+## Cloud Migration: Risk Assessment
 
 ### Potential Risks (After Migration?)
-    * Instance Sizing 
+    - Instance Sizing 
       (e.g.) Were the instances sized properly, are they performing as expected?
 
     - Office Connectivity to Cloud
@@ -18,7 +17,6 @@
     - File Level Access
       (e.g.) As with above do users have any required access, are they able to do their work?
 
-## Inspired By Z-man
 
 ### Establish CLOUD KPIs (Post Migration)
 
@@ -54,10 +52,5 @@ diagnose any problems that arise.
 
 Set a baseline metric for each KPI.. 
     
-## Summary
-In closing I would like to say that Risk Assessment happens at the level of, "Is cloud right for us" to be honest I have 
-a number of print outs that are available. Risk Assessment is not "is port 80 open" but I think what we have will suffice
-in this case. As long as we have a process I think we might be okay, if you want to talk to them about what RA really is
-I am game to have the conversation. However, RA is a huge concept. 
-
-S. Day 12JUN2019
+### Summary
+More to follow - this is a very large topic. 
