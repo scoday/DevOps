@@ -31,4 +31,4 @@ oc-firewalld() {
 
 firewalld
 installify
-oc-firewald
+oc-firewalld
