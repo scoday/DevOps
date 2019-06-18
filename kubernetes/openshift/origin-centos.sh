@@ -5,7 +5,7 @@ update-indeps() {
     sudo yum -y update
     sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
     sudo yum install -y docker-ce docker-ce-cli containerd.io git
-    sudo usermod -aG docker $user
+    sudo usermod -aG docker `whoami` 
     newgrp docker
 }
 
@@ -48,3 +48,4 @@ fix-docker-net
 bounce-dockerz
 add-fwd
 cfg-fw
+get-oc
